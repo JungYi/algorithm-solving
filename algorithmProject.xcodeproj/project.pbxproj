@@ -14,6 +14,7 @@
 		A3EC42512D35406900788A6B /* prgms_042746.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC42502D35406900788A6B /* prgms_042746.cpp */; };
 		A3EC42542D356F2100788A6B /* HRank_000001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC42532D356F2100788A6B /* HRank_000001.cpp */; };
 		A3EC42572D36C07100788A6B /* prgms_086491.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC42562D36C07100788A6B /* prgms_086491.cpp */; };
+		A3EC42592D371E4400788A6B /* prgms_042840.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC42582D371E4400788A6B /* prgms_042840.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		A3EC42502D35406900788A6B /* prgms_042746.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = prgms_042746.cpp; sourceTree = "<group>"; };
 		A3EC42532D356F2100788A6B /* HRank_000001.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HRank_000001.cpp; sourceTree = "<group>"; };
 		A3EC42562D36C07100788A6B /* prgms_086491.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = prgms_086491.cpp; sourceTree = "<group>"; };
+		A3EC42582D371E4400788A6B /* prgms_042840.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = prgms_042840.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				A3EC424E2D34697300788A6B /* prgms_042626.cpp */,
 				A3EC42502D35406900788A6B /* prgms_042746.cpp */,
 				A3EC42562D36C07100788A6B /* prgms_086491.cpp */,
+				A3EC42582D371E4400788A6B /* prgms_042840.cpp */,
 			);
 			path = programmers;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				A3EC42572D36C07100788A6B /* prgms_086491.cpp in Sources */,
 				A3EC424D2D34695200788A6B /* prgms_012906.cpp in Sources */,
 				A3EC424F2D34697300788A6B /* prgms_042626.cpp in Sources */,
+				A3EC42592D371E4400788A6B /* prgms_042840.cpp in Sources */,
 				A3EC424B2D34693700788A6B /* prgms_258712.cpp in Sources */,
 				A3EC42542D356F2100788A6B /* HRank_000001.cpp in Sources */,
 				A3EC42512D35406900788A6B /* prgms_042746.cpp in Sources */,
