@@ -42,7 +42,7 @@
 //        words.push_back(to_string(numbers[i]));
 //    
 //    for(auto& i : words)
-//        cout<< i << '\n';
+//        cout << i << '\n';
 //    
 //    sort(words.begin(), words.end(), compare);
 //    
