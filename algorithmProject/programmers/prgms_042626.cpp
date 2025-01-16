@@ -9,9 +9,9 @@
  */
 
 //042626. 더 맵게
+#include <iostream>
 #include <string>
 #include <vector>
-#include <iostream>
 #include <algorithm>
 #include <queue>
 
@@ -55,7 +55,7 @@ int solution(vector<int> scoville, int K) {
     return answer;
 }
 
-int main(int argc, const char * argv[]) {
+int main() {
     vector<int> scoville {1, 2, 3, 9, 10, 12};
     int K = 7;
     

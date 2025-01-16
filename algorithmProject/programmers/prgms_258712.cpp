@@ -128,7 +128,7 @@ int solution(vector<string> friends, vector<string> gifts) {
     return answer;
 }
 
-int main(int argc, const char * argv[]) {
+int main() {
     vector<string> friends = {"muzi", "ryan", "frodo", "neo"};
     vector<string> gifts = {"muzi frodo", "muzi frodo", "ryan muzi", "ryan muzi", "ryan muzi", "frodo muzi", "frodo ryan", "neo muzi"};
 

@@ -9,8 +9,8 @@
  */
 
 //012906. 같은 숫자는 싫어
-#include <vector>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -28,7 +28,7 @@ vector<int> solution(vector<int> arr)
     return answer;
 }
 
-int main(int argc, const char * argv[]) {
+int main() {
 //    vector<int> arr {1,1,3,3,0,1,1};
     vector<int> arr {4,4,4,3,3};
 
