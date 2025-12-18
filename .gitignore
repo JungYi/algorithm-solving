@@ -69,21 +69,23 @@ Temporary Items
 *.icloud
 
 ### Xcode ###
-## User settings
 xcuserdata/
-
-## Xcode 8 and earlier
-*.xcscmblueprint
-*.xccheckout
-
-### Xcode Patch ###
 *.xcodeproj
-!*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcodeproj/project.xcworkspace/
-!*.xcworkspace/contents.xcworkspacedata
-/*.gcno
-**/xcshareddata/WorkspaceSettings.xcsettings
+*.xcworkspace
+DerivedData/
+*.xcuserstate
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,c++,macos
+
+### Node / JS / TS ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+.env
+package.json
+package-lock.json
+tsconfig.json
