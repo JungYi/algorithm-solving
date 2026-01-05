@@ -45,6 +45,9 @@ function solution(A) {
     return equiLeaders;
 }
 
+// "전체 배열의 리더가 아닌 놈은, 쪼개진 양쪽의 리더가 될 수 없다."
+// 만약 배열을 둘로 나눴는데 왼쪽 리더도 3이고 오른쪽 리더도 3이라면, 전체 배열의 리더도 무조건 3이어야 합니다.
+// 반대로 말하면? 전체 배열의 리더를 먼저 구하고, 그 리더만 추적하면 된다는 뜻.
 function solutionOthers(A) {
     let leaderMap = new Map();
     for (let x of A)
