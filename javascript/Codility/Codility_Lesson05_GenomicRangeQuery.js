@@ -7,37 +7,37 @@ console.log(solutionOthers2(S, P, Q));
 function solution(S, P, Q) {
     const rows = 4;
     const cols = S.length;
-    const dnaArray = Array.from({ length: rows }, () => new Array(cols).fill(0));
+    const dnaArr = Array.from({ length: rows }, () => new Array(cols).fill(0));
     const resultArr = new Array(P.length);
 
-    if (S[0] === 'A') dnaArray[0][0]++;
-    else if (S[0] === 'C') dnaArray[1][0]++;
-    else if (S[0] === 'G') dnaArray[2][0]++;
-    else if (S[0] === 'T') dnaArray[3][0]++;
+    if (S[0] === 'A') dnaArr[0][0]++;
+    else if (S[0] === 'C') dnaArr[1][0]++;
+    else if (S[0] === 'G') dnaArr[2][0]++;
+    else if (S[0] === 'T') dnaArr[3][0]++;
 
     for (let i = 1; i < S.length; i++) {
-        dnaArray[0][i] = dnaArray[0][i-1];
-        dnaArray[1][i] = dnaArray[1][i-1];
-        dnaArray[2][i] = dnaArray[2][i-1];
-        dnaArray[3][i] = dnaArray[3][i-1];
+        dnaArr[0][i] = dnaArr[0][i-1];
+        dnaArr[1][i] = dnaArr[1][i-1];
+        dnaArr[2][i] = dnaArr[2][i-1];
+        dnaArr[3][i] = dnaArr[3][i-1];
 
-        if (S[i] === 'A') dnaArray[0][i]++;
-        else if (S[i] === 'C') dnaArray[1][i]++;
-        else if (S[i] === 'G') dnaArray[2][i]++;
-        else if (S[i] === 'T') dnaArray[3][i]++;
+        if (S[i] === 'A') dnaArr[0][i]++;
+        else if (S[i] === 'C') dnaArr[1][i]++;
+        else if (S[i] === 'G') dnaArr[2][i]++;
+        else if (S[i] === 'T') dnaArr[3][i]++;
     }
     
     for (let i = 0; i < P.length; i++) {
         if (P[i] === 0) {
             for (let j = 0; j < 4; j++) {
-                if (dnaArray[j][Q[i]] !== 0) {
+                if (dnaArr[j][Q[i]] !== 0) {
                     resultArr[i] = j+1;
                     break;
                 }
             }
         } else {
             for (let j = 0; j < 4; j++) {
-                if ((dnaArray[j][Q[i]] - dnaArray[j][P[i]-1]) !== 0) {
+                if ((dnaArr[j][Q[i]] - dnaArr[j][P[i]-1]) !== 0) {
                     resultArr[i] = j+1;
                     break;
                 }
