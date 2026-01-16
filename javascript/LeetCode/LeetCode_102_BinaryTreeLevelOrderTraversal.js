@@ -19,42 +19,47 @@ const rootTree = arrayToTree(root);
  */
 var levelOrder = function(root) {
     console.log(root);
-    
     if (!root) return [];
 
-    const result = [];
-    // const queue = [root];
-
-
-    if (!root) return 0; // 나무가 없으면 0개
-
     let count = 0;
-    // 1. Queue(대기줄) 준비: 처음에 루트 노드를 넣습니다.
+    const result = [];
     const queue = [root];
 
     // 2. 줄에 사람이 있는 동안 계속 반복!
     while (queue.length > 0) {
-        // 줄 맨 앞의 노드를 꺼냅니다.
-        const currentNode = queue.shift();
-        
-        // [작업 수행] 노드를 하나 만났으니 카운트 증가!
+        // const currentNode = queue.shift();
+        // 1. [지독한 핵심] 현재 층에 몇 명이 있는지 "스냅샷"을 찍습니다.
+        let levelSize = queue.length; 
+        let currentLevel = []; // 이번 층의 사람들을 담을 바구니
+
         count++;
+        /**
         console.log(`Visited: ${currentNode.val}, Current count: ${count}`);
-
-        // 3. 꺼낸 노드의 자식들이 있다면 줄을 세웁니다.
-        // 왼쪽 자식 줄 서!
-        if (currentNode.left) {
-            queue.push(currentNode.left);
-        }
-        // 오른쪽 자식 줄 서!
-        if (currentNode.right) {
-            queue.push(currentNode.right);
-        }
-
+        
+        if (currentNode.left) queue.push(currentNode.left);
+        if (currentNode.right) queue.push(currentNode.right);
+        
         console.log(`Queue state: [${queue.map(node => node.val).join(', ')}]`);
+         */
+        
+        // 2. 딱 'levelSize'만큼만 반복해서 꺼냅니다.
+        // for (let i = 0; i < queue.length; i++) { // X
+        // 자식들이 queue.push로 계속 들어오면 queue.length가 실시간으로 늘어남.
+        for (let i = 0; i < levelSize; i++) {
+            const node = queue.shift();
+            currentLevel.push(node.val);
+            console.log(`  Processing Node: ${node.val}`);
+            
+            if (node.left) queue.push(node.left); // 자식들은 큐의 '맨 뒤'에 넣습니다. 
+            if (node.right) queue.push(node.right); // (이들은 다음번 while 루프의 levelSize가 될 겁니다.)
+        }
+
+        // 3. 한 층이 끝났으니 결과지에 기록!
+        result.push(currentLevel);
+        console.log(`Completed Level ${count}: [${currentLevel.join(', ')}]`);
     }
 
-    return count;
+    return result;
 };
 
 console.log(`levelOrder(root): ${levelOrder(rootTree)}`);
