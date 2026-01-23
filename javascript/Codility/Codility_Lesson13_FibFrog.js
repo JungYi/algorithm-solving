@@ -94,7 +94,7 @@ function solutionOthers(A) {
     return -1;
 }
 
-function solutionPractice(A) {
+function solutionExplanation(A) {
     const getFibonacci = (N) => {
         const fib = [1, 2];
         for (let i = 2; i < N; i++) {
