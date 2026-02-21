@@ -24,8 +24,8 @@ public class LeetCode_200_NumberofIslands {
         System.out.println("Sinking target at [" + row + ", " + col + "]:");
         printGridSimple(grid);
 
-        dfs(grid, row-1, col); // down
-        dfs(grid, row+1, col); // up
+        dfs(grid, row-1, col); // up
+        dfs(grid, row+1, col); // down
         dfs(grid, row, col-1); // left
         dfs(grid, row, col+1); // right
     }
