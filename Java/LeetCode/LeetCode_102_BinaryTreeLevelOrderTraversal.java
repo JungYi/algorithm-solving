@@ -1,13 +1,5 @@
 import java.util.*;
 
-// 1. 트리 노드 정의
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
-
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -24,6 +16,14 @@ class TreeNode {
  * }
  */
 public class LeetCode_102_BinaryTreeLevelOrderTraversal {
+    // 1. 트리 노드 정의
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    
     public List<List<Integer>> levelOrder(TreeNode root) {
         /** BFS
          * 1. 큐 준비 (queue = [root])
